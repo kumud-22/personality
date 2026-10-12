@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <title>Teacher 5.0 — AI Predicts Your Teacher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Teacher 5.0 home">
+      <span class="brand-mark">T<span>5</span></span>
+      <span>TEACHER <b>5.0</b></span>
+    </a>
+    <span class="event-tag"><span class="live-dot"></span> 150 YEARS · AI EXHIBITION</span>
+  </header>
+
+  <main class="shell">
+    <section class="hero" id="intro">
+      <div class="eyebrow"><span class="sparkle">✦</span> A CLASSROOM-INSPIRED AI EXPERIMENT</div>
+      <h1>AI predicts<br>your <span class="gradient-text">teacher.</span></h1>
+      <p class="hero-copy">Real classroom choices. A playful AI-style analysis. One surprisingly accurate-sounding teacher profile.</p>
+      <div class="hero-pills">
+        <span>↻ New questions every round</span>
+        <span>◎ No login required</span>
+        <span>⚡ Runs in your browser</span>
+      </div>
+      <button class="primary-button" id="startBtn">Start the experiment <span>↗</span></button>
+      <p class="microcopy">5 questions · about 1 minute · just for fun</p>
+    </section>
+
+    <section class="quiz-panel hidden" id="quizPanel" aria-live="polite">
+      <div class="quiz-topline">
+        <div>
+          <div class="eyebrow">THE TEACHER SIMULATOR</div>
+          <h2>How would you teach?</h2>
+        </div>
+        <div class="progress-count"><span id="currentNumber">01</span><span class="muted"> / 05</span></div>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="question-meta"><span class="question-index" id="questionIndex">QUESTION 01</span><span class="meta-dot">•</span><span>REAL CLASSROOM CHOICE</span></div>
+      <h3 class="question-text" id="questionText">Question goes here</h3>
+      <div class="answer-list" id="answerList"></div>
+      <div class="quiz-controls">
+        <button class="text-button" id="backBtn" disabled>← Back</button>
+        <button class="primary-button next-button" id="nextBtn" disabled>Next question <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="result-panel hidden" id="resultPanel" aria-live="polite">
+      <div class="result-header">
+        <div class="eyebrow"><span class="sparkle">✦</span> SIMULATION COMPLETE</div>
+        <div class="result-stamp">AI-STYLE ANALYSIS <span>✓</span></div>
+      </div>
+      <div class="result-main">
+        <div class="result-icon" id="resultIcon">🧠</div>
+        <div class="result-title-wrap">
+          <p class="result-label">YOUR CLASSROOM ARCHETYPE</p>
+          <h2 id="resultTitle">The Discussion Architect</h2>
+          <p class="result-subtitle" id="resultSubtitle"></p>
+        </div>
+      </div>
+      <p class="result-summary" id="resultSummary"></p>
+      <div class="result-grid">
+        <article class="insight-card">
+          <span class="card-symbol">✦</span>
+          <p class="card-label">YOUR TEACHING VIBE</p>
+          <h3 id="vibeTitle"></h3>
+          <p id="vibeText"></p>
+        </article>
+        <article class="insight-card">
+          <span class="card-symbol">⌁</span>
+          <p class="card-label">CLASSROOM SUPERPOWER</p>
+          <h3 id="strengthTitle"></h3>
+          <p id="strengthText"></p>
+        </article>
+        <article class="insight-card wide-card">
+          <span class="card-symbol">↗</span>
+          <p class="card-label">YOUR SIGNATURE MOVE</p>
+          <h3 id="signatureTitle"></h3>
+          <p id="signatureText"></p>
+        </article>
+      </div>
+      <div class="score-section">
+        <div class="score-heading"><h3>Teaching-style signals</h3><span>Based on your answers</span></div>
+        <div id="scoreBars" class="score-bars"></div>
+      </div>
+      <div class="quote-card"><span>“</span><p id="catchphrase"></p></div>
+      <p class="disclaimer">For exhibition entertainment only. This is a fictional, rule-based AI-style profile—not a scientific assessment or a real prediction.</p>
+      <div class="result-actions">
+        <button class="primary-button" id="retryBtn">Try another question set <span>↻</span></button>
+        <button class="secondary-button" id="printBtn">Print result ↗</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>PROJECT 150</span><span class="footer-divider">×</span><span>HUMANS + AI</span>
+      <p>Curiosity is the first step in every great lesson.</p>
+    </footer>
+  </main>
+</body>
+</html>
